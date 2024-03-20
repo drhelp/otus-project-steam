@@ -1,0 +1,7 @@
+version: 2
+
+sources:
+  - name: steam_data
+    database: steam_dwh  
+    tables:
+      - name: ext_steam_data

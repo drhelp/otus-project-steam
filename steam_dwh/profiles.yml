@@ -1,0 +1,13 @@
+steam_dwh:
+  target: dev
+  outputs:
+    dev:
+      type: clickhouse
+      schema: steam_dwh
+      driver: http
+      host: rc1a-9p7ssm8srb4e77t9.mdb.yandexcloud.net
+      port: 8443
+      user: dbt_user
+      password: dbt_user_pwd
+      secure: True
+      verify: False
