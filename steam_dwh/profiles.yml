@@ -7,7 +7,7 @@ steam_dwh:
       driver: http
       host: rc1a-9p7ssm8srb4e77t9.mdb.yandexcloud.net
       port: 8443
-      user: dbt_user
-      password: dbt_user_pwd
+      user: "{{env_var('CH_DBT_USER')}}"
+      password: "{{env_var('CH_DBT_PASSWORD')}}"
       secure: True
       verify: False

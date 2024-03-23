@@ -4,7 +4,7 @@
     )
 }}
 with review as (
-      select * from {{ ref('stg_steam_review') }}
+      select * from {{ ref('fact_review') }}
 ),
 author as (
         select * from {{ref("dim_author")}}
@@ -31,7 +31,7 @@ renamed as (
         sum(received_for_free) as free_count
     from review
     join app on (review.app_id = app.app_id)
-    join author on (review.author_steamid = author.author_steamid)
+    --join author on (review.author_steamid = author.author_steamid)
     group by 
         app.app_name,
         language as review_language,
